@@ -7,4 +7,6 @@ pod 'SSZipArchive'
 pod 'KissXML'
 pod 'MBProgressHUD'
 
+pod 'CocoaHTTPServer'
+
 end
