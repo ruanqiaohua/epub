@@ -20,18 +20,18 @@ static MBProgressHUD *HUD;
     [controller.view addSubview:HUD];
     HUD.delegate = controller;
     if(message!=nil)
-        HUD.labelText = message;
+        HUD.label.text = message;
     if(detail!=nil){
-        HUD.detailsLabelText = detail;
+        HUD.detailsLabel.text = detail;
         HUD.square = YES;
     }
     
     HUD.customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     HUD.mode = MBProgressHUDModeCustomView;
     
-	[HUD show:YES];
+	[HUD showAnimated:YES];
     if(delay > 0){
-        [HUD hide:YES afterDelay:delay];
+        [HUD hideAnimated:YES afterDelay:delay];
     }
 }
 
@@ -45,9 +45,9 @@ static MBProgressHUD *HUD;
     
     HUD.delegate = controller;
     if(message!=nil)
-        HUD.labelText = message;
+        HUD.label.text = message;
     if(detail!=nil){
-        HUD.detailsLabelText = detail;
+        HUD.detailsLabel.text = detail;
         HUD.square = YES;
     }
     
@@ -56,24 +56,24 @@ static MBProgressHUD *HUD;
         HUD.mode = MBProgressHUDModeCustomView;
     }
     
-	[HUD show:YES];
+	[HUD showAnimated:YES];
     
     if(delay > 0){
-        [HUD hide:YES afterDelay:delay];
+        [HUD hideAnimated:YES afterDelay:delay];
     }
 }
 
 + (void)hide{
-	[HUD hide:YES];
+	[HUD hideAnimated:YES];
 }
 
 + (void)reset{
-    HUD.labelText = nil;
-    HUD.detailsLabelText = nil;
+    HUD.label.text = nil;
+    HUD.detailsLabel.text = nil;
     HUD.square = NO;
     HUD.customView = nil;
     HUD.mode = MBProgressHUDModeIndeterminate;
-    [HUD hide:NO];
+    [HUD hideAnimated:NO];
 }
 
 @end

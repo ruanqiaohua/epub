@@ -5,5 +5,6 @@ target 'epub' do
 pod "JSONKit-NoWarning"
 pod 'SSZipArchive'
 pod 'KissXML'
+pod 'MBProgressHUD'
 
 end

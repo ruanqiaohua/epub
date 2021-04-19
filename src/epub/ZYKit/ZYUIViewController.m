@@ -15,30 +15,30 @@
 
 -(void)hudShow:(NSString *)message delay:(int)delay{
     if(hud!=nil)
-        [hud hide:NO];
+        [hud hideAnimated:NO];
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
     hud.customView = [[[UIView alloc] init] autorelease];
     hud.mode = MBProgressHUDModeCustomView;
     [self.view addSubview:hud];
     [hud release];
-    hud.labelText = message;
-    [hud show:YES];
+    hud.label.text = message;
+    [hud showAnimated:YES];
     if(delay > 0)
-    [hud hide:YES afterDelay:1];
+    [hud hideAnimated:YES afterDelay:1];
 }
 
 -(void)hudHide{
-    [hud hide:NO];
+    [hud hideAnimated:NO];
 }
 
 -(void)hudLoad:(NSString *)message{
     if(hud!=nil)
-        [hud hide:NO];
+        [hud hideAnimated:NO];
     self.hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     [hud release];
-    hud.labelText = message;
-    [hud show:YES];
+    hud.label.text = message;
+    [hud showAnimated:YES];
 }
 
 

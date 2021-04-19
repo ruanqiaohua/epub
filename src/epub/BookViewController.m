@@ -87,9 +87,8 @@
     
     hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
-    hud.delegate = self;
-    hud.labelText = NSLocalizedString(@"loading page", nil);
-    [hud show:NO];
+    hud.label.text = NSLocalizedString(@"loading page", nil);
+    [hud showAnimated:NO];
     
     [self hideToolbar];
     [NSThread detachNewThreadSelector:@selector(start:) toTarget:self withObject:path];
@@ -98,7 +97,9 @@
 -(void)start:(NSString *)path{
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     
-    [hud hide:NO];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [hud hideAnimated:NO];
+    });
     
     self.bookLoader = [[EPubBookLoader alloc] initWithPath:path];
     
@@ -164,9 +165,8 @@
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex {
     hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
-    hud.delegate = self;
-    hud.labelText = NSLocalizedString(@"loading page", nil);
-    [hud show:NO];
+    hud.label.text = NSLocalizedString(@"loading page", nil);
+    [hud showAnimated:NO];
     
 	webView.hidden = YES;
 	
@@ -422,7 +422,7 @@
     if(self.isClearWebViewContent)
         return;
     
-    [hud hide:NO];
+    [hud hideAnimated:NO];
     
 	NSString *insertRule1 = [NSString stringWithFormat:@"addCSSRule('html', 'font-size:14px;margin:0px;padding: 0px; height: %fpx; -webkit-column-gap: 0px; -webkit-column-width: %fpx;')", webView.frame.size.height, webView.frame.size.width];
 	NSString *insertRule2 = @"addCSSRule('p', 'text-align: justify;')";
@@ -458,8 +458,8 @@
                 hud = [[MBProgressHUD alloc] initWithView:self.view];
                 [self.view addSubview:hud];
                 hud.delegate = self;
-                hud.labelText = NSLocalizedString(@"loading page", nil);
-                [hud show:YES];
+                hud.label.text = NSLocalizedString(@"loading page", nil);
+                [hud showAnimated:YES];
                 [[bookLoader.spineArray objectAtIndex:0] setDelegate:self];
                 [[bookLoader.spineArray objectAtIndex:0] loadChapterWithWindowSize:webView.bounds fontPercentSize:currentTextSize];
             }

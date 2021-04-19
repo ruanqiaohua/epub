@@ -82,8 +82,6 @@
 		26AB15D1158063600055A2BD /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB15B1158063600055A2BD /* ASINetworkQueue.m */; };
 		26AB15D2158063600055A2BD /* ASIWebPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB15B4158063600055A2BD /* ASIWebPageRequest.m */; };
 		26AB15D3158063600055A2BD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB15B6158063600055A2BD /* Reachability.m */; };
-		26AB15D5158063600055A2BD /* HudDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB15BD158063600055A2BD /* HudDemoViewController.m */; };
-		26AB15D6158063600055A2BD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB15BF158063600055A2BD /* MBProgressHUD.m */; };
 		26AB15DA1580638F0055A2BD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AB15D91580638F0055A2BD /* CFNetwork.framework */; };
 		26AB15DC158063970055A2BD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AB15DB158063970055A2BD /* SystemConfiguration.framework */; };
 		26AB15DE158063A40055A2BD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AB15DD158063A40055A2BD /* QuartzCore.framework */; };
@@ -272,10 +270,6 @@
 		26AB15B4158063600055A2BD /* ASIWebPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIWebPageRequest.m; sourceTree = "<group>"; };
 		26AB15B5158063600055A2BD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		26AB15B6158063600055A2BD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		26AB15BC158063600055A2BD /* HudDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudDemoViewController.h; sourceTree = "<group>"; };
-		26AB15BD158063600055A2BD /* HudDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudDemoViewController.m; sourceTree = "<group>"; };
-		26AB15BE158063600055A2BD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		26AB15BF158063600055A2BD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		26AB15D91580638F0055A2BD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		26AB15DB158063970055A2BD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		26AB15DD158063A40055A2BD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -579,25 +573,6 @@
 			path = http;
 			sourceTree = "<group>";
 		};
-		26AB15BA158063600055A2BD /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				26AB15BB158063600055A2BD /* Classes */,
-				26AB15BE158063600055A2BD /* MBProgressHUD.h */,
-				26AB15BF158063600055A2BD /* MBProgressHUD.m */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		26AB15BB158063600055A2BD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				26AB15BC158063600055A2BD /* HudDemoViewController.h */,
-				26AB15BD158063600055A2BD /* HudDemoViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		26D9C3ED157CA68000756CB2 = {
 			isa = PBXGroup;
 			children = (
@@ -656,7 +631,6 @@
 				26AB1588158063600055A2BD /* EGORefreshTableHeaderView */,
 				26AB158B158063600055A2BD /* helper */,
 				26AB159E158063600055A2BD /* http */,
-				26AB15BA158063600055A2BD /* MBProgressHUD */,
 				26D9C431157CA6D700756CB2 /* Category */,
 				26052DCF17643F0D00BADD1A /* InAppPurchaseManager.h */,
 				26052DD017643F0D00BADD1A /* InAppPurchaseManager.m */,
@@ -882,8 +856,6 @@
 				26AB15D1158063600055A2BD /* ASINetworkQueue.m in Sources */,
 				26AB15D2158063600055A2BD /* ASIWebPageRequest.m in Sources */,
 				26AB15D3158063600055A2BD /* Reachability.m in Sources */,
-				26AB15D5158063600055A2BD /* HudDemoViewController.m in Sources */,
-				26AB15D6158063600055A2BD /* MBProgressHUD.m in Sources */,
 				266350BD1581DD1200C749BF /* HistoryViewListController.m in Sources */,
 				26846D51175A2CAA003BF1E5 /* MyHTTPConnection.m in Sources */,
 				26846D54175A2EA2003BF1E5 /* GetAddress.mm in Sources */,

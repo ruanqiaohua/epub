@@ -1,24 +1,28 @@
 PODS:
   - JSONKit-NoWarning (1.2)
   - KissXML (5.0)
+  - MBProgressHUD (1.2.0)
   - SSZipArchive (2.2.3)
 
 DEPENDENCIES:
   - JSONKit-NoWarning
   - KissXML
+  - MBProgressHUD
   - SSZipArchive
 
 SPEC REPOS:
   trunk:
     - JSONKit-NoWarning
     - KissXML
+    - MBProgressHUD
     - SSZipArchive
 
 SPEC CHECKSUMS:
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
   KissXML: ce643413d618ad69886d0d43c3792b7dedfe476e
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
 
-PODFILE CHECKSUM: 80301bf0bbf5e3a0c898315361d43b7d91f79b07
+PODFILE CHECKSUM: 497e7a247b4b0fe8eb2654ffaf69fb3c676f368b
 
 COCOAPODS: 1.10.1
