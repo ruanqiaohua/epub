@@ -84,16 +84,13 @@
 }
 
 - (void) parseOPF:(NSString*)opfPath{
-    NSLog(@"start parse OPF:%d",(int)[[NSDate date] timeIntervalSince1970]);
+        
     DDXMLDocument *xmlDoc = [[DDXMLDocument alloc] initWithData:[NSData dataWithContentsOfFile:opfPath] options:0 error:nil];
-    NSArray* itemsArray = [xmlDoc nodesForXPath:@"//opf:item" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
     
-    if(itemsArray.count == 0){
-        itemsArray = [xmlDoc nodesForXPath:@"//item" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
-    }
+    NSError *error;
     
-    NSLog(@"finish item:%d",(int)[[NSDate date] timeIntervalSince1970]);
-    
+    NSArray* itemsArray = [[xmlDoc.rootElement elementForName:@"manifest"] children];
+        
     NSString* ncxFileName;
     NSMutableDictionary* itemDictionary = [[NSMutableDictionary alloc] init];
 	for (DDXMLElement* element in itemsArray) {
@@ -114,11 +111,9 @@
     
     //titles
     NSMutableDictionary* titleDictionary = [[NSMutableDictionary alloc] init];
-    
-    NSArray* navPoints = [ncxToc nodesForXPath:@"//ncx:navPoint" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.daisy.org/z3986/2005/ncx/" forKey:@"ncx"] error:nil];
-    if(navPoints.count == 0){
-        navPoints = [ncxToc nodesForXPath:@"//navPoint" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.daisy.org/z3986/2005/ncx/" forKey:@"ncx"] error:nil];
-    }
+        
+    NSArray* navPoints = [[ncxToc.rootElement elementForName:@"navMap"] children];
+
     NSLog(@"%@",[ncxToc stringValue]);
     
     for (DDXMLElement* navPoint in navPoints) {
@@ -132,10 +127,7 @@
     NSLog(@"finish titles:%d",(int)[[NSDate date] timeIntervalSince1970]);
     
     //chapters
-	NSArray* itemRefsArray = [xmlDoc nodesForXPath:@"//opf:itemref" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
-    if(itemRefsArray.count == 0){
-        itemRefsArray = [xmlDoc nodesForXPath:@"//itemref" namespaceMappings:[NSDictionary dictionaryWithObject:@"http://www.idpf.org/2007/opf" forKey:@"opf"] error:nil];
-    }
+    NSArray* itemRefsArray = [[xmlDoc.rootElement elementForName:@"spine"] children];
 
     NSLog(@"finish chapters:%d",(int)[[NSDate date] timeIntervalSince1970]);
     

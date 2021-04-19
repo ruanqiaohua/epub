@@ -61,11 +61,6 @@
 		2699A28B1761A8DC00D0953E /* ZYUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699A2831761A8DC00D0953E /* ZYUIViewController.m */; };
 		2699A2961761AB3F00D0953E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699A2951761AB3F00D0953E /* SettingsViewController.m */; };
 		2699A2991762DE7600D0953E /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699A2981762DE7500D0953E /* StoreViewController.m */; };
-		26A2731D175E5C2A00648BDB /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A27310175E5C2A00648BDB /* DDXMLElementAdditions.m */; };
-		26A2731E175E5C2A00648BDB /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A27313175E5C2A00648BDB /* NSString+DDXML.m */; };
-		26A2731F175E5C2A00648BDB /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A27316175E5C2A00648BDB /* DDXMLDocument.m */; };
-		26A27320175E5C2A00648BDB /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A27318175E5C2A00648BDB /* DDXMLElement.m */; };
-		26A27321175E5C2A00648BDB /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A2731A175E5C2A00648BDB /* DDXMLNode.m */; };
 		26AB15821580633C0055A2BD /* SearchWebView.js in Sources */ = {isa = PBXBuildFile; fileRef = 26AB15741580633C0055A2BD /* SearchWebView.js */; };
 		26AB15C0158063600055A2BD /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB158A158063600055A2BD /* EGORefreshTableHeaderView.m */; };
 		26AB15C1158063600055A2BD /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB158D158063600055A2BD /* AnimationHelper.m */; };
@@ -232,18 +227,6 @@
 		2699A2951761AB3F00D0953E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		2699A2971762DE7300D0953E /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		2699A2981762DE7500D0953E /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
-		26A2730F175E5C2A00648BDB /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
-		26A27310175E5C2A00648BDB /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
-		26A27312175E5C2A00648BDB /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
-		26A27313175E5C2A00648BDB /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
-		26A27314175E5C2A00648BDB /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
-		26A27315175E5C2A00648BDB /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
-		26A27316175E5C2A00648BDB /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
-		26A27317175E5C2A00648BDB /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
-		26A27318175E5C2A00648BDB /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
-		26A27319175E5C2A00648BDB /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
-		26A2731A175E5C2A00648BDB /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
-		26A2731C175E5C2A00648BDB /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		26AB15741580633C0055A2BD /* SearchWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = SearchWebView.js; path = epub/SearchWebView.js; sourceTree = "<group>"; };
 		26AB1589158063600055A2BD /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		26AB158A158063600055A2BD /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
@@ -529,49 +512,6 @@
 			path = ZYKit;
 			sourceTree = "<group>";
 		};
-		26A2730D175E5C2A00648BDB /* KissXML */ = {
-			isa = PBXGroup;
-			children = (
-				26A2730E175E5C2A00648BDB /* Additions */,
-				26A27311175E5C2A00648BDB /* Categories */,
-				26A27314175E5C2A00648BDB /* DDXML.h */,
-				26A27315175E5C2A00648BDB /* DDXMLDocument.h */,
-				26A27316175E5C2A00648BDB /* DDXMLDocument.m */,
-				26A27317175E5C2A00648BDB /* DDXMLElement.h */,
-				26A27318175E5C2A00648BDB /* DDXMLElement.m */,
-				26A27319175E5C2A00648BDB /* DDXMLNode.h */,
-				26A2731A175E5C2A00648BDB /* DDXMLNode.m */,
-				26A2731B175E5C2A00648BDB /* Private */,
-			);
-			path = KissXML;
-			sourceTree = "<group>";
-		};
-		26A2730E175E5C2A00648BDB /* Additions */ = {
-			isa = PBXGroup;
-			children = (
-				26A2730F175E5C2A00648BDB /* DDXMLElementAdditions.h */,
-				26A27310175E5C2A00648BDB /* DDXMLElementAdditions.m */,
-			);
-			path = Additions;
-			sourceTree = "<group>";
-		};
-		26A27311175E5C2A00648BDB /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				26A27312175E5C2A00648BDB /* NSString+DDXML.h */,
-				26A27313175E5C2A00648BDB /* NSString+DDXML.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		26A2731B175E5C2A00648BDB /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				26A2731C175E5C2A00648BDB /* DDXMLPrivate.h */,
-			);
-			path = Private;
-			sourceTree = "<group>";
-		};
 		26AB1588158063600055A2BD /* EGORefreshTableHeaderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,7 +658,6 @@
 				26AB159E158063600055A2BD /* http */,
 				26AB15BA158063600055A2BD /* MBProgressHUD */,
 				26D9C431157CA6D700756CB2 /* Category */,
-				26A2730D175E5C2A00648BDB /* KissXML */,
 				26052DCF17643F0D00BADD1A /* InAppPurchaseManager.h */,
 				26052DD017643F0D00BADD1A /* InAppPurchaseManager.m */,
 				26D9C40B157CA68000756CB2 /* AppDelegate.h */,
@@ -974,11 +913,6 @@
 				26846DD6175A4529003BF1E5 /* ContextFilterLogFormatter.m in Sources */,
 				26846DD7175A4529003BF1E5 /* DispatchQueueLogFormatter.m in Sources */,
 				26CEF440175D98EF007F2B1C /* HttpServerViewController.m in Sources */,
-				26A2731D175E5C2A00648BDB /* DDXMLElementAdditions.m in Sources */,
-				26A2731E175E5C2A00648BDB /* NSString+DDXML.m in Sources */,
-				26A2731F175E5C2A00648BDB /* DDXMLDocument.m in Sources */,
-				26A27320175E5C2A00648BDB /* DDXMLElement.m in Sources */,
-				26A27321175E5C2A00648BDB /* DDXMLNode.m in Sources */,
 				2699A2781760663800D0953E /* iRate.m in Sources */,
 				2699A2841761A8DC00D0953E /* ZYBadgeView.m in Sources */,
 				2699A2851761A8DC00D0953E /* ZYImageView.m in Sources */,

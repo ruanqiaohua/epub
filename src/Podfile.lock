@@ -1,20 +1,24 @@
 PODS:
   - JSONKit-NoWarning (1.2)
+  - KissXML (5.0)
   - SSZipArchive (2.2.3)
 
 DEPENDENCIES:
   - JSONKit-NoWarning
+  - KissXML
   - SSZipArchive
 
 SPEC REPOS:
   trunk:
     - JSONKit-NoWarning
+    - KissXML
     - SSZipArchive
 
 SPEC CHECKSUMS:
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  KissXML: ce643413d618ad69886d0d43c3792b7dedfe476e
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
 
-PODFILE CHECKSUM: 85ba3075b92acee31e41a201ef9cfb8236d3f46c
+PODFILE CHECKSUM: 80301bf0bbf5e3a0c898315361d43b7d91f79b07
 
 COCOAPODS: 1.10.1
