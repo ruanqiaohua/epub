@@ -1,5 +1,5 @@
 #import "EPubBookLoader.h"
-#import "ZipArchive.h"
+#import <SSZipArchive/ZipArchive.h>
 #import "Chapter.h"
 #import "DDXML.h"
 #import "DDXMLElementAdditions.h"
@@ -28,41 +28,34 @@
     [self parseOPF:opfPath];
 }
 
+- (NSString *)desPath {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *cacheDirectory = [paths objectAtIndex:0];
+    NSString *md5 = [EncryptHelper fileMd5:self.filePath];
+    NSString *desPath=[NSString stringWithFormat:@"%@/%@",cacheDirectory, md5];
+    return desPath;
+}
+
 - (void)unzipAndSaveFile{
-	ZipArchive* za = [[ZipArchive alloc] init];
-    if([za UnzipOpenFile:self.filePath]){
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-        NSString *cacheDirectory = [paths objectAtIndex:0];
-        NSString *strPath=[NSString stringWithFormat:@"%@/%@/",cacheDirectory,self.filePath];
-        
-        NSString *md5 = [EncryptHelper fileMd5:self.filePath];
-        if(![md5 isEqualToString:(NSString *)[ResourceHelper getUserDefaults:[self.filePath lastPathComponent]]]){
-            NSLog(@"unzip...");
-            //Delete all the previous files
-            NSFileManager *filemanager=[[NSFileManager alloc] init];
-            if ([filemanager fileExistsAtPath:strPath]) {
-                NSError *error;
-                [filemanager removeItemAtPath:strPath error:&error];
-            }
-            //[filemanager release];
-            //start unzip
-            BOOL ret = [za UnzipFileTo:strPath overWrite:YES];
-            if( NO==ret ){
-                // error handler here
-                UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error"
-                                                              message:@"Error while unzipping the epub"
-                                                             delegate:self
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles:nil];
-                [alert show];
-                //[alert release];
-                alert=nil;
-            }
-            [za UnzipCloseFile];
-            
-            [ResourceHelper setUserDefaults:md5 forKey:[self.filePath lastPathComponent]];
-        }
-	}					
+    
+    NSString *desPath=[self desPath];
+
+    if ([[NSFileManager defaultManager] fileExistsAtPath:desPath]) {
+        [[NSFileManager defaultManager] removeItemAtPath:desPath error:nil];
+    }
+    
+    BOOL result = [SSZipArchive unzipFileAtPath:self.filePath toDestination:desPath overwrite:YES password:nil error:nil];
+    if(result == NO){
+
+        // error handler here
+        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:@"Error while unzipping the epub"
+                                                     delegate:self
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+        [alert show];
+    }
 	//[za release];
     NSLog(@"unzip finished");
 }
@@ -74,17 +67,15 @@
 }
 
 - (NSString*) parseManifestFile{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cacheDirectory = [paths objectAtIndex:0];
-    NSString *strPath=[NSString stringWithFormat:@"%@/%@/",cacheDirectory,self.filePath];
+    NSString *strPath=[self desPath];
     
-	NSString* manifestFilePath = [NSString stringWithFormat:@"%@META-INF/container.xml", strPath];
+	NSString* manifestFilePath = [NSString stringWithFormat:@"%@/META-INF/container.xml", strPath];
     
 	NSFileManager *fileManager = [[NSFileManager alloc] init];
 	if ([fileManager fileExistsAtPath:manifestFilePath]) {
         DDXMLDocument *xmlDoc = [[DDXMLDocument alloc] initWithData:[NSData dataWithContentsOfFile:manifestFilePath] options:0 error:nil];
         NSString *opfPath = [[[[xmlDoc.rootElement elementForName:@"rootfiles"] elementForName:@"rootfile"] attributeForName:@"full-path"] stringValue];
-		return [NSString stringWithFormat:@"%@%@", strPath, opfPath];
+		return [NSString stringWithFormat:@"%@/%@", strPath, opfPath];
 	} else {
 		NSLog(@"ERROR: ePub not Valid");
 		return nil;

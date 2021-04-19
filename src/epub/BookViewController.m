@@ -5,7 +5,6 @@
 #import "EPubBookLoader.h"
 #import "MessageHelper.h"
 #import "Constants.h"
-#import "GADBannerView.h"
 
 @interface BookViewController()
 
@@ -102,7 +101,6 @@
     [hud hide:NO];
     
     self.bookLoader = [[EPubBookLoader alloc] initWithPath:path];
-    [bookLoader release];
     
     if(bookLoader.error == 1){
         [webView loadHTMLString:NSLocalizedString(@"parse_error", nil) baseURL:nil];
@@ -728,16 +726,6 @@
     self.toolbar.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, 44);
     self.headerbar.frame = CGRectMake(0, -44, self.view.frame.size.width, 44);
     [UIView commitAnimations];
-}
-
-- (GADRequest *)createRequest {
-    GADRequest *request = [GADRequest request];
-    
-    // Make the request for a test ad. Put in an identifier for the simulator as
-    // well as any devices you want to receive test ads.
-    request.testDevices =
-    [NSArray arrayWithObjects:@"b335f74b5f5d26982168ab68b06b6053316157a7",nil];
-    return request;
 }
 
 -(void)bookDidLoaded:(NSNotification *)notification{

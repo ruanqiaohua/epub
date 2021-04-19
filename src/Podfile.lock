@@ -1,0 +1,20 @@
+PODS:
+  - JSONKit-NoWarning (1.2)
+  - SSZipArchive (2.2.3)
+
+DEPENDENCIES:
+  - JSONKit-NoWarning
+  - SSZipArchive
+
+SPEC REPOS:
+  trunk:
+    - JSONKit-NoWarning
+    - SSZipArchive
+
+SPEC CHECKSUMS:
+  JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
+
+PODFILE CHECKSUM: 85ba3075b92acee31e41a201ef9cfb8236d3f46c
+
+COCOAPODS: 1.10.1
