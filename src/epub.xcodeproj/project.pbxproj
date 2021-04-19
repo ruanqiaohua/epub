@@ -62,7 +62,6 @@
 		2699A2961761AB3F00D0953E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699A2951761AB3F00D0953E /* SettingsViewController.m */; };
 		2699A2991762DE7600D0953E /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2699A2981762DE7500D0953E /* StoreViewController.m */; };
 		26AB15821580633C0055A2BD /* SearchWebView.js in Sources */ = {isa = PBXBuildFile; fileRef = 26AB15741580633C0055A2BD /* SearchWebView.js */; };
-		26AB15C0158063600055A2BD /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB158A158063600055A2BD /* EGORefreshTableHeaderView.m */; };
 		26AB15C1158063600055A2BD /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB158D158063600055A2BD /* AnimationHelper.m */; };
 		26AB15C2158063600055A2BD /* AuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB158F158063600055A2BD /* AuthHelper.m */; };
 		26AB15C3158063600055A2BD /* CacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB1591158063600055A2BD /* CacheHelper.m */; };
@@ -226,8 +225,6 @@
 		2699A2971762DE7300D0953E /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		2699A2981762DE7500D0953E /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		26AB15741580633C0055A2BD /* SearchWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = SearchWebView.js; path = epub/SearchWebView.js; sourceTree = "<group>"; };
-		26AB1589158063600055A2BD /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
-		26AB158A158063600055A2BD /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		26AB158C158063600055A2BD /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
 		26AB158D158063600055A2BD /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
 		26AB158E158063600055A2BD /* AuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthHelper.h; sourceTree = "<group>"; };
@@ -506,15 +503,6 @@
 			path = ZYKit;
 			sourceTree = "<group>";
 		};
-		26AB1588158063600055A2BD /* EGORefreshTableHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				26AB1589158063600055A2BD /* EGORefreshTableHeaderView.h */,
-				26AB158A158063600055A2BD /* EGORefreshTableHeaderView.m */,
-			);
-			path = EGORefreshTableHeaderView;
-			sourceTree = "<group>";
-		};
 		26AB158B158063600055A2BD /* helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,7 +616,6 @@
 				26446E53175F77B4008E2A90 /* admob */,
 				26846D6F175A4529003BF1E5 /* CocoaHTTPServer */,
 				26D9C422157CA6AB00756CB2 /* Resources */,
-				26AB1588158063600055A2BD /* EGORefreshTableHeaderView */,
 				26AB158B158063600055A2BD /* helper */,
 				26AB159E158063600055A2BD /* http */,
 				26D9C431157CA6D700756CB2 /* Category */,
@@ -836,7 +823,6 @@
 				265A875A157F47ED00EFF497 /* BookViewController.m in Sources */,
 				265A875B157F47ED00EFF497 /* EPubBookLoader.m in Sources */,
 				26AB15821580633C0055A2BD /* SearchWebView.js in Sources */,
-				26AB15C0158063600055A2BD /* EGORefreshTableHeaderView.m in Sources */,
 				26AB15C1158063600055A2BD /* AnimationHelper.m in Sources */,
 				26AB15C2158063600055A2BD /* AuthHelper.m in Sources */,
 				26AB15C3158063600055A2BD /* CacheHelper.m in Sources */,
