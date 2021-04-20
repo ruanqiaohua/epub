@@ -86,18 +86,19 @@
 - (void) parseOPF:(NSString*)opfPath{
         
     DDXMLDocument *xmlDoc = [[DDXMLDocument alloc] initWithData:[NSData dataWithContentsOfFile:opfPath] options:0 error:nil];
-    
-    NSError *error;
-    
+        
     NSArray* itemsArray = [[xmlDoc.rootElement elementForName:@"manifest"] children];
         
     NSString* ncxFileName;
     NSMutableDictionary* itemDictionary = [[NSMutableDictionary alloc] init];
 	for (DDXMLElement* element in itemsArray) {
-            [itemDictionary setObject:[[element attributeForName:@"href"] stringValue] forKey:[[element attributeForName:@"id"] stringValue]];
-            if([[[element attributeForName:@"media-type"] stringValue] isEqualToString:@"application/x-dtbncx+xml"]){
-                ncxFileName = [[element attributeForName:@"href"] stringValue];
-            }
+        if (![element isKindOfClass:[DDXMLElement class]]) {
+            continue;
+        }
+        [itemDictionary setObject:[[element attributeForName:@"href"] stringValue] forKey:[[element attributeForName:@"id"] stringValue]];
+        if([[[element attributeForName:@"media-type"] stringValue] isEqualToString:@"application/x-dtbncx+xml"]){
+            ncxFileName = [[element attributeForName:@"href"] stringValue];
+        }
     }
     
     NSLog(@"finish items:%d",(int)[[NSDate date] timeIntervalSince1970]);

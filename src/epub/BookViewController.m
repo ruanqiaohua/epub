@@ -71,27 +71,29 @@
 
 - (void) loadBook:(NSNotification *)notification{
     
-    [historyListViewController.view setHidden:YES];
-    [currentPageLabel setText:@"0/0"];
-    
-    NSString *path = [notification object];
-    currentSpineIndex = 0;
-    currentPageInSpineIndex = 0;
-    pagesInCurrentSpineCount = 0;
-    totalPagesCount = 0;
-	searching = NO;
-    epubLoaded = NO;
-    
-    self.isClearWebViewContent = YES;
-    [webView loadHTMLString:NSLocalizedString(@"loading data", nil) baseURL:nil];
-    
-    hud = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:hud];
-    hud.label.text = NSLocalizedString(@"loading page", nil);
-    [hud showAnimated:NO];
-    
-    [self hideToolbar];
-    [NSThread detachNewThreadSelector:@selector(start:) toTarget:self withObject:path];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [historyListViewController.view setHidden:YES];
+        [currentPageLabel setText:@"0/0"];
+        
+        NSString *path = [notification object];
+        currentSpineIndex = 0;
+        currentPageInSpineIndex = 0;
+        pagesInCurrentSpineCount = 0;
+        totalPagesCount = 0;
+        searching = NO;
+        epubLoaded = NO;
+        
+        self.isClearWebViewContent = YES;
+        [webView loadHTMLString:NSLocalizedString(@"loading data", nil) baseURL:nil];
+        
+        hud = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:hud];
+        hud.label.text = NSLocalizedString(@"loading page", nil);
+        [hud showAnimated:NO];
+        
+        [self hideToolbar];
+        [NSThread detachNewThreadSelector:@selector(start:) toTarget:self withObject:path];
+    });
 }
 
 -(void)start:(NSString *)path{
