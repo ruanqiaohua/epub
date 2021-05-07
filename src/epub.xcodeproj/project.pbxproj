@@ -78,7 +78,7 @@
 		26D9C479157CA79500756CB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D9C478157CA79500756CB2 /* CoreGraphics.framework */; };
 		26EDC4B31584F6AD00F714D4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EDC4B11584F6AD00F714D4 /* Icon.png */; };
 		26EDC4B41584F6AD00F714D4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EDC4B21584F6AD00F714D4 /* Icon@2x.png */; };
-		4158F9AC39D4595DF1C679F6 /* libPods-epub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CADF429BD3DAEF45A34665C /* libPods-epub.a */; };
+		3905B9497AFD3509B55A0F1F /* libPods-epub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241C0A784684F5411B5C1A76 /* libPods-epub.a */; };
 		F167ADBE262D274A00215171 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F167ADBD262D274A00215171 /* StoreKit.framework */; };
 		F167ADCA262D2C1700215171 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F167ADC9262D2C1700215171 /* Launch Screen.storyboard */; };
 		F1FFC03126292E3900D5FD7F /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FFC03026292E3900D5FD7F /* libxml2.2.tbd */; };
@@ -86,6 +86,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241C0A784684F5411B5C1A76 /* libPods-epub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-epub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26052DCF17643F0D00BADD1A /* InAppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseManager.h; sourceTree = "<group>"; };
 		26052DD017643F0D00BADD1A /* InAppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseManager.m; sourceTree = "<group>"; };
 		26080030176D9AE400345FCE /* Lord of the Flies.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lord of the Flies.epub"; path = "epub/Lord of the Flies.epub"; sourceTree = "<group>"; };
@@ -221,12 +222,9 @@
 		26D9C436157CA6E400756CB2 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		26D9C437157CA6E400756CB2 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		26D9C438157CA6E400756CB2 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
-		26D9C476157CA77600756CB2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		26D9C478157CA79500756CB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		26D9C47A157CA7DB00756CB2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		26EDC4B11584F6AD00F714D4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = epub/Icon.png; sourceTree = "<group>"; };
 		26EDC4B21584F6AD00F714D4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "epub/Icon@2x.png"; sourceTree = "<group>"; };
-		3CADF429BD3DAEF45A34665C /* libPods-epub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-epub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		538768EDA55A0C938A701845 /* Pods-epub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epub.release.xcconfig"; path = "Target Support Files/Pods-epub/Pods-epub.release.xcconfig"; sourceTree = "<group>"; };
 		EF707A8CCCCD25A8FA60F821 /* Pods-epub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epub.debug.xcconfig"; path = "Target Support Files/Pods-epub/Pods-epub.debug.xcconfig"; sourceTree = "<group>"; };
 		F167ADBD262D274A00215171 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -256,7 +254,7 @@
 				26D9C3FF157CA68000756CB2 /* Foundation.framework in Frameworks */,
 				26D9C401157CA68000756CB2 /* CoreData.framework in Frameworks */,
 				F1FFC044262931DB00D5FD7F /* CoreServices.framework in Frameworks */,
-				4158F9AC39D4595DF1C679F6 /* libPods-epub.a in Frameworks */,
+				3905B9497AFD3509B55A0F1F /* libPods-epub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,8 +387,6 @@
 				26446E67175F7804008E2A90 /* AdSupport.framework */,
 				26446E65175F77E8008E2A90 /* MessageUI.framework */,
 				26446E63175F77DF008E2A90 /* AudioToolbox.framework */,
-				26D9C47A157CA7DB00756CB2 /* libxml2.dylib */,
-				26D9C476157CA77600756CB2 /* libz.dylib */,
 				26846D4D175A2C72003BF1E5 /* Security.framework */,
 				26B0EE6F15BE7C5700C07B78 /* CoreText.framework */,
 				26AB15E1158063DD0055A2BD /* MobileCoreServices.framework */,
@@ -402,7 +398,7 @@
 				26D9C3FC157CA68000756CB2 /* UIKit.framework */,
 				26D9C3FE157CA68000756CB2 /* Foundation.framework */,
 				26D9C400157CA68000756CB2 /* CoreData.framework */,
-				3CADF429BD3DAEF45A34665C /* libPods-epub.a */,
+				241C0A784684F5411B5C1A76 /* libPods-epub.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -748,7 +744,7 @@
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "epub/epub-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/epub/admob\"",
@@ -759,6 +755,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
+				d = "";
 			};
 			name = Release;
 		};
@@ -825,17 +822,15 @@
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "epub/epub-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/epub/admob\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.heiruo.reader;
 				PRODUCT_NAME = uReader;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
+				d = "";
 			};
 			name = Debug;
 		};

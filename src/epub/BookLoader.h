@@ -10,8 +10,8 @@
 
 @interface BookLoader : NSObject
 
-@property(nonatomic, retain) NSArray* spineArray;
-@property(nonatomic, retain) NSString* filePath;
+@property(nonatomic, strong) NSArray* spineArray;
+@property(nonatomic, copy) NSString* filePath;
 @property(nonatomic) int error;
 
 - (id) initWithPath:(NSString*)path;

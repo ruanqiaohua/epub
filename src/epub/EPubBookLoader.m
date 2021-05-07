@@ -32,29 +32,32 @@
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *cacheDirectory = [paths objectAtIndex:0];
-    NSString *md5 = [EncryptHelper fileMd5:self.filePath];
-    NSString *desPath=[NSString stringWithFormat:@"%@/%@",cacheDirectory, md5];
+    NSString *filename = [[self.filePath lastPathComponent] stringByDeletingPathExtension];
+    NSString *desPath=[NSString stringWithFormat:@"%@/%@/",cacheDirectory, filename];
     return desPath;
 }
 
 - (void)unzipAndSaveFile{
     
-    NSString *desPath=[self desPath];
+    NSString *desPath= [self desPath];
 
     if ([[NSFileManager defaultManager] fileExistsAtPath:desPath]) {
         [[NSFileManager defaultManager] removeItemAtPath:desPath error:nil];
     }
     
-    BOOL result = [SSZipArchive unzipFileAtPath:self.filePath toDestination:desPath overwrite:YES password:nil error:nil];
+    BOOL result = [SSZipArchive unzipFileAtPath:self.filePath toDestination:desPath];
     if(result == NO){
 
         // error handler here
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error"
-                                                      message:@"Error while unzipping the epub"
-                                                     delegate:self
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-        [alert show];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error"
+                                                          message:@"Error while unzipping the epub"
+                                                         delegate:self
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+            [alert show];
+        });
     }
 	//[za release];
     NSLog(@"unzip finished");

@@ -23,7 +23,6 @@
         error = 0;
 		self.filePath = path;
 		self.spineArray = [[NSMutableArray alloc] init];
-        [self.spineArray release];
 		[self parse];
 	}
 	return self;

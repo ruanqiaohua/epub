@@ -31,7 +31,6 @@
             [book setObject:[dirs objectAtIndex:i] forKey:@"title"];
             [book setObject:[NSString stringWithFormat:@"%@/%@",documentsDirectory,[dirs objectAtIndex:i]] forKey:@"path"];
             [books addObject:book];
-            [book release];
         }
     }
     [dir setObject:books forKey:@"data"];
